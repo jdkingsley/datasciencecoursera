@@ -9,16 +9,21 @@ of the Magnitude of the Acceleration experienced by the body and
 cell phone of the subject) and further processes that data to find
 the mean-mean and mean-stddev for the various activities.
 
-Full deatails of the original experiment and associated data
+Full details of the original experiment and associated data
 can be found at:
 
 	http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
 
-The R script, named run_analysis.R, reads the datasets from the original
-experiment form the working directory of the current R session.
-The script does not require inputs but does require the reshape2
-and plyr R packages. The output of the script is a new text file
-fwritten to the working directory of the session.
+The R script, named run_analysis.R, reads the datasets from the
+original experiment form the working directory of the current R 
+session. The script does not require inputs but does require the
+reshape2 and plyr R packages. The output of the script is a new
+text file named BodyAccActivity.txt which is written to the 
+working directory of the session.
+
+The code book for the processed data is "CodeBook Analysis of
+HAR Data.md". The code book describes the resulting data table
+found in the output file of the R script.
 
 All original data is used under license as follows:
 Use of this dataset in publications must be acknowledged by
