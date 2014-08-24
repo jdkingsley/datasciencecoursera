@@ -55,14 +55,14 @@ colnames(activity)<-c("activityId","activity")
 
 ## Join the descriptive names of the actitities (found in activity.txt)
 ## to the activity Ids found in training and test data sets. Note that inner
-## join is used to eliminate any data that does not have an acctivity assigned
+## join is used to eliminate any data that does not have an activity assigned
 mean_sd <- join(activity, mean_sd, by="activityId", type="inner")
 
 ## Create a tall tidy frame of the Body Acceleration Magnitude measurements
 tidy.mean_sd <- melt(mean_sd, id.vars=c("activity","subject"), measure.vars=
-                         c("Mean_Body_Acc_Magnitude","StdDev_Body_Acc_Magnitude") )
+                     c("Mean_Body_Acc_Magnitude","StdDev_Body_Acc_Magnitude") )
 
 ## Cast the Body Acceleration Magnitudes into a table as the mean of each
 ## activity and persist it in a file.
-tidy.bodyAccActivity <- dcast(tidy.mean_sd, activity~variable,mean)
+tidy.bodyAccActivity <- dcast(tidy.mean_sd, activity~variable, mean)
 write.table(tidy.bodyAccActivity, "BodyAccActivity.txt", row.name=FALSE)

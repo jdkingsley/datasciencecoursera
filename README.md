@@ -15,7 +15,7 @@ can be found at:
 	http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
 
 The R script, named run_analysis.R, reads the datasets from the
-original experiment form the working directory of the current R 
+original experiment from the working directory of the current R 
 session. The script does not require inputs but does require the
 reshape2 and plyr R packages. The output of the script is a new
 text file named BodyAccActivity.txt which is written to the 
